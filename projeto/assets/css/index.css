@@ -35,6 +35,16 @@ header {
     color: #3A322B;
 }
 
+#links a:hover{
+    border-bottom: 1px solid #3A322B;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 #botao_header, .botao_superior {
     border: none;
     background-color: #3A322B;
@@ -94,7 +104,7 @@ header {
 
 #centro{
     margin-top: 3%;
-    margin-left: 7%;
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
 }
@@ -153,6 +163,7 @@ header {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 5%;
+    cursor: pointer;
 }
 
 .imagem{
@@ -229,4 +240,118 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #menu-toggle {
+        display: block;
+        margin-left: 45%;
+    }
+
+    #links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F3EEE3;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    #links.active {
+        display: flex;
+    }
+
+    #botao_header{
+        display: none;
+    }
+
+    #superior{
+        height: 75vh;
+    }
+
+    .texto1, .subtexto1{
+        font-size: 55px;
+    }
+
+    #caixa_botao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao_superior, .botao_superior2{
+        display: flex;
+        margin-top: 8%;
+        margin-left: 20%;
+        width: 25vh;
+        padding: 25px;
+        justify-content: center;
+    }
+
+    #centro{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #caixa_imagem_centro{
+        margin-top: 5%;
+        margin-left: 0%;
+        height: 40vh;
+        width: 90%;
+        margin-bottom: 5vh;
+    }
+
+    #inferior{
+        display: none;
+    }
+
+    .footer_superior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_Coluna1,
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .abas_footer {
+        font-size: 20px;
+    }
+
+    .footer_Coluna2 a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer_Coluna4 div {
+        display: inline;
+    }
+
+    .footer_Coluna4 span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .barra {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        font-size: 13px;
+    }
 }

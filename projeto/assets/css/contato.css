@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    background-image: url(../img/contato_principal.png);
+    background-size: cover;
+    background-position: right center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEE3;
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    gap: 15%;
+    box-sizing: border-box;
+    color: #3A322B;
+}
+
+#logo {
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    width: 55%;
+}
+
+#links a {
+    text-decoration: none;
+    color: #3A322B;
+}
+
+#links a:hover{
+    border-bottom: 1px solid #3A322B;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#botao_header, .botao_superior {
+    border: none;
+    background-color: #3A322B;
+    color: #F3EEE3;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#botao_header:hover{
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+#main_principal, #main_esquerda_principal{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 11.5vh;
+}
+
+#main_esquerda_principal{
+    margin-top: 5vh;
+}
+
+#esquerda_main{
+    display: flex;
+    flex-direction: column;
+}
+
+#esquerda_superior, #esquerda_inferior_icones{
+    margin-top: 2vh;
+    margin-left: 20vh;
+}
+
+#esquerda_inferior_texto{
+    margin-left: 5vh;
+    margin-top: 2vh;
+}
+
+.titulo_esquerda,.subtexto{
+    color: #42270a;
+    /*font-family: "Poppins", sans-serif;*/
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.subtexto{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 4vh;
+}
+
+.icones_main{
+    background-color: #ecd8b5;
+    color: #42270a;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5vh;
+}
+
+
+.titulo_texto{
+    color: #42270a;
+    font-size: 26px;
+}
+
+.email, .endereco, .horario{
+    margin-top: 5vh;
+}
+
+footer {
+    background-color: #c68346;
+}
+
+.footer_superior {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_Coluna1,
+.footer_Coluna2,
+.footer_Coluna3,
+.footer_Coluna4 {
+    width: 55vh;
+    padding: 5% 5%;
+    color: white;
+    font-size: 14px;
+    font-family: 'Poppins';
+}
+
+.footer_Coluna1 span {
+    font-size: 22px;
+}
+
+.abas_footer {
+    font-size: 25px;
+}
+
+.icones {
+    color: white;
+}
+
+.footer_Coluna2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_Coluna2 a:hover {
+    color: #3A322B;
+}
+
+.barra {
+    width: 100%;
+    color: white;
+    height: 10vh;
+    background: #895129;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        background-position: center; 
+    }
+
+    #menu-toggle {
+        display: block;
+        margin-left: 45%;
+    }
+
+    #links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F3EEE3;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    #links.active {
+        display: flex;
+    }
+
+    #botao_header{
+        display: none;
+    }
+
+    .titulo_esquerda{
+        font-size: 50px;
+    }
+
+    .subtexto{
+        font-size: 16px;
+    }
+
+    #esquerda_superior, #esquerda_inferior_texto {
+       margin-left: 0vh;
+    }
+
+    #esquerda_inferior_icones, #esquerda_inferior_texto{
+        margin-left: 5vh;
+    }
+
+    .footer_superior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_Coluna1,
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .abas_footer {
+        font-size: 20px;
+    }
+
+    .footer_Coluna2 a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer_Coluna4 div {
+        display: inline;
+    }
+
+    .footer_Coluna4 span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .barra {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+}
