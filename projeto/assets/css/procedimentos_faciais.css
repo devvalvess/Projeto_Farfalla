@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    background-color: #dfd5c5;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEE3;
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    gap: 15%;
+    box-sizing: border-box;
+    color: #3A322B;
+}
+
+#logo {
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    width: 55%;
+}
+
+#links a {
+    text-decoration: none;
+    color: #3A322B;
+}
+
+.indicacao_pag {
+    border-bottom: solid 1px #341d08;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#botao_header,
+.botao_superior {
+    border: none;
+    background-color: #3A322B;
+    color: #F3EEE3;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#botao_header:hover {
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#primeiro_titulo {
+    color: #774618;
+    opacity: 0.5;
+}
+
+.divisao_titulo {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px #341d08;
+    padding-bottom: 2vh;
+    box-sizing: border-box;
+}
+
+#segundo_titulo {
+    color: #341d08;
+    font-size: 38px;
+}
+
+#subtitulo {
+    font-size: 14px;
+    color: #3A322B;
+    opacity: 0.8;
+    margin-left: 65%;
+}
+
+#caixa_pai {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5vh;
+}
+
+.caixa_mae {
+    height: 50vh;
+    width: 40vh;
+    background-color: #f0e7d9;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.imagens {
+    padding: 10px;
+    box-sizing: border-box;
+    height: 65%;
+}
+
+.imagens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.caixa_mae:hover{
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+.titulo {
+    padding: 20px;
+    font-size: 22px;
+    color: #341d08;
+    opacity: 0.8;
+    font-family: "Poppins", sans-serif;
+}
+
+.subtitulo {
+    padding-top: 1vh;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #341d08;
+    opacity: 0.8;
+    font-family: "Poppins", sans-serif;
+}
+

@@ -38,8 +38,8 @@ header {
     color: #3A322B;
 }
 
-#links a:hover{
-    border-bottom: 1px solid #3A322B;
+.indicacao_pag{
+    border-bottom: solid 1px #341d08;
 }
 
 #menu-toggle {
