@@ -186,3 +186,89 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 768px){
+
+    #menu-toggle {
+        display: block;
+        margin-left: 45%;
+    }
+
+    #links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #F3EEE3;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    #links.active {
+        display: flex;
+    }
+
+    #botao_header {
+        display: none;
+    }
+
+     .titulo, .subtitulo{
+        padding: 10px;
+        box-sizing: border-box;
+     }
+     
+    #inferior{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer_superior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_Coluna1,
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer_Coluna2,
+    .footer_Coluna3,
+    .footer_Coluna4 {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .abas_footer {
+        font-size: 20px;
+    }
+
+    .footer_Coluna2 a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer_Coluna4 div {
+        display: inline;
+    }
+
+    .footer_Coluna4 span {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .barra {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        font-size: 13px;
+    }
+}
