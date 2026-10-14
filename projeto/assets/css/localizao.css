@@ -136,6 +136,56 @@ header {
     width: 60%;
 }
 
+header > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icone_whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icone_whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.icone_whatsapp::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25d366;
+    opacity: 0.6;
+    z-index: -1;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+@keyframes whatsapp-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
 footer {
     background-color: #c68346;
 }
@@ -187,16 +237,27 @@ footer {
     align-items: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+
+    header {
+        position: relative;
+        gap: 0;
+    }
+
+    #logo {
+        font-size: 28px;
+    }
 
     #menu-toggle {
         display: block;
-        margin-left: 45%;
+        margin-left: auto;
     }
 
     #links {
         position: absolute;
-        top: 70px;
+        top: 100%;
+        z-index: 1000;
+        box-sizing: border-box;
         left: 0;
         width: 100%;
         background-color: #F3EEE3;
@@ -215,17 +276,71 @@ footer {
         display: none;
     }
 
-     .titulo, .subtitulo{
-        padding: 10px;
+    .titulo {
+        font-size: 28px;
+        margin-top: 24px;
+        text-align: center;
+        padding: 0 6%;
         box-sizing: border-box;
-     }
-     
-    #inferior{
-        display: flex;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        margin-top: 12px;
+        text-align: center;
+        padding: 0 6%;
+        box-sizing: border-box;
+    }
+
+    .subtitulo br {
+        display: none;
+    }
+
+    #centro_maps {
+        width: 88%;
+        height: 45vh;
+        margin: 24px auto;
+    }
+
+    #inferior {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 16px;
+        margin: 0 6% 24px;
+    }
+
+    .caixas {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
+        box-sizing: border-box;
+    }
+
+    .icone {
+        width: 70px;
+        height: 70px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+        align-items: center;
+    }
+
+    .titulo_caixa {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .subtitulo_caixa {
+        margin-left: 0;
+        width: 80%;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 14px;
+        font-size: 18px;
+    }
+
+    .subtitulo_caixa br {
+        display: none;
     }
 
     .footer_superior {
@@ -239,6 +354,7 @@ footer {
     .footer_Coluna4 {
         width: 100%;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     .footer_Coluna2,
@@ -270,5 +386,6 @@ footer {
         padding: 15px;
         text-align: center;
         font-size: 13px;
+        box-sizing: border-box;
     }
 }
