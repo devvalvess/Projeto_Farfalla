@@ -15,27 +15,41 @@
 </head>
 
 <body>
+
     <header>
+        <a href="index.html">
         <div id="logo">
             Farfalla
         </div>
+        </a>
 
         <div id="menu-toggle">
             ☰
         </div>
 
-        <div id="links">
-            <a class="indicacao_pag" href="index.html">INICIO</a>
+        <nav id="links">
+            <a class="indicacao_pag" href="index.html">INÍCIO</a>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-link">PROCEDIMENTOS</a>
+
+                <div class="dropdown-menu">
+                    <a href="procedimentos_faciais.html">Estética Facial</a>
+                    <a href="procedimentos_corporais.html">Estética Corporal</a>
+                    <a href="Terapias_BemEstar_Capilar.html">Terapias Bem-Estar</a>
+                    <a href="Procedimentos_e_tratamentos.html">Procedimentos Avançados</a>
+                </div>
+            </div>
+
             <a href="contato.html">CONTATO</a>
-            <a href="localizacao.html">LOCALIZAÇÂO</a>
+            <a href="localizacao.html">LOCALIZAÇÃO</a>
             <a href="sobre.html">SOBRE</a>
-            <a href="procedimentos_faciais.html">PROCEDIMENTOS</a>
-            <a href="procedimentos_corporais.html">PROCEDIMENTOS2</a>
-            <a href="Terapias_BemEstar_Capilar.html">PROCEDIMENTOS3</a>
-            <a href="Procedimentos_e_tratamentos.html">PROCEDIMENTOS4</a>
-        </div>
+        </nav>
+        <a href="https://wa.me/5511981678604?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">
         <button id="botao_header">Agende Agora</button>
+        </a>
     </header>
+
     <main>
         <div id="superior">
             <div class="texto1">
@@ -49,8 +63,10 @@
                 <br> um atendimento exclusivo.
             </div>
             <div id="caixa_botao">
-                <button class="botao_superior">Agende Consulta</button>
-                <button class="botao_superior2">Conheça os tratamentos →</button>
+                <a href="procedimentos_faciais.html">
+                    <button class="botao_superior">Conheça os tratamentos →</button>
+                </a>
+
             </div>
         </div>
         <div id="centro">
@@ -136,10 +152,10 @@
                 <a href="index.html">Início</a>
                 <br>
                 <br>
-                <a href="sobrenos.html">Contato</a>
+                <a href="contato.html">Contato</a>
                 <br>
                 <br>
-                <a href="planos.html">Localização</a>
+                <a href="localizacao.html">Localização</a>
                 <br>
                 <br>
                 <a href="Contato">Sobre</a>

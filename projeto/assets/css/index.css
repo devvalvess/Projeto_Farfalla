@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #dfd5c5;
 }
 
 header {
@@ -12,6 +13,11 @@ header {
     display: flex;
     gap: 15%;
     box-sizing: border-box;
+    color: #3A322B;
+}
+
+header a {
+    text-decoration: none;
     color: #3A322B;
 }
 
@@ -30,13 +36,74 @@ header {
     width: 55%;
 }
 
-#links a {
+#links>a,
+.dropdown-link {
     text-decoration: none;
     color: #3A322B;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
-.indicacao_pag {
-    border-bottom: solid 1px #341d08;
+#links>a:hover,
+.dropdown-link:hover {
+    color: #895129;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 280px;
+    padding: 12px 0;
+    box-sizing: border-box;
+    background-color: #F3EEE3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 13px 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #3A322B;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: normal;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #E5D8C4;
+    color: #895129;
 }
 
 #menu-toggle {
@@ -97,6 +164,9 @@ header {
 #superior {
     height: 90vh;
     background-image: url(../img/main_principal.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .texto1 {
@@ -119,19 +189,23 @@ header {
     font-size: 22px;
 }
 
-.botao_superior {
-    margin-top: 1%;
-    margin-left: 10%;
-    width: 12%;
+#caixa_botao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.botao_superior2 {
+.botao_superior {
     border: 1px solid #3A322B;
     background-color: #F3EEE3;
+    color: #3A322B;
     font-family: "Poppins", sans-serif;
     border-radius: 5px;
     padding: 15px;
     cursor: pointer;
+    margin-top: 2vh;
+    margin-left: 20vh;
+    width: 100%;
 }
 
 #centro {
@@ -144,6 +218,7 @@ header {
 .caixa_texto_centro {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .texto2 {
@@ -162,11 +237,6 @@ header {
     font-size: 20px;
     display: flex;
 }
-
-.caixa_texto_centro {
-    gap: 20px;
-}
-
 
 #caixa_imagem_centro {
     border: solid #895129;
@@ -211,6 +281,7 @@ header {
 .ajuste_imagens {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .textos_caixas {
@@ -223,7 +294,7 @@ header {
 }
 
 .caixas:hover {
-    transition: all .3s;
+    transition: all 0.3s;
     transform: scale(1.05);
 }
 
@@ -244,7 +315,7 @@ footer {
     padding: 5% 5%;
     color: white;
     font-size: 14px;
-    font-family: 'Poppins';
+    font-family: "Poppins", sans-serif;
 }
 
 .footer_Coluna1 span {
@@ -271,11 +342,13 @@ footer {
 .barra {
     width: 100%;
     color: white;
-    height: 10vh;
+    min-height: 10vh;
     background: #895129;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 @keyframes whatsapp-pulse {
@@ -302,6 +375,10 @@ footer {
         font-size: 28px;
     }
 
+    .indicacao_pag {
+        border: none;
+    }
+
     #menu-toggle {
         display: block;
         margin-left: auto;
@@ -316,14 +393,91 @@ footer {
         width: 100%;
         background-color: #F3EEE3;
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 0;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
         display: none;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 
     #links.active {
         display: flex;
+    }
+
+    #links>a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 25px;
+        text-align: left;
+    }
+
+    #links a:hover {
+        background-color: #EAE1D3;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .dropdown-link {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 25px;
+        text-align: left;
+        background-color: #F3EEE3;
+        cursor: pointer;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        background-color: #EAE1D3;
+        border: none;
+        box-shadow: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform: none;
+    }
+
+    .dropdown-menu a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 35px;
+        text-align: left;
+        color: #3A322B;
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #DCD0BD;
+        color: #895129;
+    }
+
+    #links.active .dropdown-menu {
+        display: none;
+    }
+
+    #links.active .dropdown.open .dropdown-menu {
+        display: flex;
+        flex-direction: column;
     }
 
     #botao_header {
@@ -369,6 +523,10 @@ footer {
         margin-top: 18px;
     }
 
+    #caixa_botao a {
+        text-decoration: none;
+    }
+
     .botao_superior,
     .botao_superior2 {
         display: flex;
@@ -377,6 +535,10 @@ footer {
         padding: 16px;
         justify-content: center;
         box-sizing: border-box;
+    }
+
+    .botao_superior2 {
+        width: clamp(47vh, 30vh, 100vh);
     }
 
     #centro {
@@ -455,5 +617,19 @@ footer {
         text-align: center;
         font-size: 13px;
         box-sizing: border-box;
+    }
+
+    #links.active .dropdown .dropdown-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    #links.active .dropdown.open .dropdown-menu {
+        display: flex;
+        flex-direction: column;
     }
 }
