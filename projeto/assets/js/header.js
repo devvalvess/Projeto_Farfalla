@@ -9,9 +9,18 @@ menuToggle.addEventListener("click", function () {
 });
 
 dropdownLink.addEventListener("click", function () {
-    if (window.innerWidth <= 900    ) {
+    if (window.innerWidth <= 900) {
         dropdown.classList.toggle("open");
     } else {
         dropdown.classList.toggle("open");
     }
 });
+
+const dropdown2 = document.querySelectorAll(".dropdown")[1];
+const dropdownLink2 = document.querySelectorAll(".dropdown-link")[1];
+
+if (dropdownLink2) {
+    dropdownLink2.addEventListener("click", function () {
+        dropdown2.classList.toggle("open");
+    });
+}

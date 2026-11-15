@@ -213,7 +213,10 @@ header a {
 #imagem {
     border-radius: 20px;
     height: auto;
-    width: clamp(60vh,70vh,80vh);
+    width: 80vh;
+    max-width: 45%;
+    flex: none;               /* a foto não encolhe por causa do tamanho do texto */
+    align-self: flex-start;   /* nem estica na altura do texto */
 }
 
 .ajustes_imagem, #borboleta{
@@ -222,8 +225,14 @@ header a {
     border-radius: 20px;
 }
 
-#texto{
-    gap: 10px;
+.ajustes_imagem {
+    display: block;
+    height: auto;             /* mantém a proporção original da foto */
+}
+
+#textos {
+    flex: 1;                  /* o texto ocupa só o espaço que sobra */
+    min-width: 0;
 }
 
 #titulo {
@@ -513,6 +522,12 @@ footer {
 
     #imagem {
         width: 100%;
+        max-width: 100%;
+        align-self: auto;
+    }
+
+    #textos {
+        flex: none;
     }
 
     .ajustes_imagem {

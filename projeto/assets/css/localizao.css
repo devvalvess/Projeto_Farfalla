@@ -165,12 +165,13 @@ header a{
     border: 1px solid #3A322B;
     background-color: #c7bdb4;
     border-radius: 10px;
-    width: 30vh;
-    height: 50vh;
+    width: 290px;
+    height: auto;
     margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .icone{

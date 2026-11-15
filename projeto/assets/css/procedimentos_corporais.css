@@ -170,9 +170,16 @@ main {
     margin-top: 5vh;
 }
 
+#caixa_pai>a {
+    display: flex;
+    width: 280px;
+}
+
 .caixa_mae {
-    height: 60vh;
-    width: 40vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: #f0e7d9;
     border-radius: 10px;
     cursor: pointer;
@@ -182,7 +189,8 @@ main {
 .imagens {
     padding: 10px;
     box-sizing: border-box;
-    height: 65%;
+    height: 230px;
+    flex: none;
 }
 
 .imagens img{
@@ -199,7 +207,7 @@ main {
 }
 
 .titulo {
-    margin-top: 2vh;
+    margin-top: 12px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
@@ -209,8 +217,8 @@ main {
 }
 
 .subtitulo {
-    margin-top: 1vh;
-    padding: 20px;
+    margin-top: 0;
+    padding: 8px 20px 20px;
     font-size: 14px;
     color: #341d08;
     opacity: 0.8;
@@ -461,6 +469,7 @@ footer {
 
     #caixa_pai > a {
         display: block;
+        width: auto;
     }
 
     .caixa_mae {

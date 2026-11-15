@@ -162,7 +162,7 @@ header a {
 }
 
 #superior {
-    height: 90vh;
+    height: auto;
     background-image: url(../img/main_principal.png);
     background-size: cover;
     background-position: center;
@@ -206,6 +206,7 @@ header a {
     margin-top: 2vh;
     margin-left: 20vh;
     width: 100%;
+    margin-bottom: 5vh;
 }
 
 #centro {
@@ -256,6 +257,7 @@ header a {
 
 #caixa_mae_inferior {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
@@ -264,12 +266,14 @@ header a {
 
 .caixas {
     border: 2px solid #895129;
-    height: 35vh;
-    width: 25vh;
+    height: auto;
+    width: 190px;
     border-radius: 5px;
     padding: 10px;
+    box-sizing: border-box;
     margin-bottom: 5%;
     cursor: pointer;
+    min-height: 35vh; 
 }
 
 .imagem {
@@ -288,8 +292,10 @@ header a {
     color: #c68346;
     font-size: 20px;
     display: flex;
+    text-align: center; 
     justify-content: center;
     padding-top: 15%;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
