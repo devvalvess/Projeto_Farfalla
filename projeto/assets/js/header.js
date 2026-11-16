@@ -9,11 +9,7 @@ menuToggle.addEventListener("click", function () {
 });
 
 dropdownLink.addEventListener("click", function () {
-    if (window.innerWidth <= 900) {
         dropdown.classList.toggle("open");
-    } else {
-        dropdown.classList.toggle("open");
-    }
 });
 
 const dropdown2 = document.querySelectorAll(".dropdown")[1];
